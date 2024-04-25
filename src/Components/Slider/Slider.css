@@ -1,0 +1,136 @@
+.slider-container {
+    position: relative;
+  }
+  
+  .slider-overlay {
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+    z-index: 1;
+  }
+  
+  .top {
+    top: 0;
+    background: linear-gradient(180deg, rgba(11, 66, 39, 0.8), transparent);
+  }
+  
+  .bottom {
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(11, 66, 39, 0.8), transparent);
+  }
+  
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    /* height: 60vh; */
+    height: 270px;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.header-slogan-bottom {
+    z-index: 2;
+    position: absolute;
+    top: 12vh;
+    width: 100%;
+    height: 30vh;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    /* background: linear-gradient(0deg, #0b4227 0%, rgba(3, 39, 18, 0.8) 40%, rgba(3, 50, 25, 0.4) 60%,rgba(0,51,23,0) 100%); */
+}
+
+.header-slogan-top {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    /* background: linear-gradient(180deg, #0b4227 0%, rgba(3, 39, 18, 0.8) 10%, rgba(3, 50, 25, 0.4) 80%,rgba(0,51,23,0) 100%); */
+}
+
+.header-slogan-text {
+    position: absolute;
+    top: 40%;
+    line-height: normal;
+    /* left: 33%;
+    right: 33%; */
+    /* text-align: center; */
+    left: 50%;
+    right: 4%;
+    text-align: center;
+}
+
+
+.efficient-cooling-solutions{
+    text-align: start;
+    padding: 5vh
+}
+
+@media screen and (max-width: 1200px) {
+    .efficient-cooling-solutions{
+        text-align: start;
+        padding: 1vh;
+    }
+    .header-slogan-text {
+        top: 6%;
+        left: 10%;
+        right: 10%;
+    }
+    
+}
+/* 
+@media screen and (max-width: 992px) {
+    .efficient-cooling-solutions{
+        text-align: start;
+        padding: 1vh;
+    }
+    .header-slogan-text {
+        top: 6%;
+        left: 10%;
+        right: 10%;
+    }
+    
+} */
+
+@media screen and (max-width: 767px) {
+    .header-slogan-text {
+        top: 30%;
+        left: 10%;
+        right: 10%;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    .efficient-cooling-solutions{
+        text-align: start;
+        padding: 1vh;
+        font-size: 6vw;
+    } 
+
+    .header-slogan-text {
+        top: 30%;
+        left: 10%;
+        right: 10%;
+        font-size: 4vw;
+    }
+}
