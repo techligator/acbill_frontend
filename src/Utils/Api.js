@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8000'; // Base URL of your API
+const BASE_URL = 'https://api.acbillcalculator.com'; // Base URL of your API
 
 export const predict = async (requestData) => {
   try {
