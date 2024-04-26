@@ -61,10 +61,26 @@ function MyApp({ isLoading }) {
         // justifyContent: 'center',
         // opacity: isLoading ? 0 : 1,
         // transition: 'opacity 0.5s ease-in-out',
+
       }}
     >
+      <div
+      className='header' 
+      style={{     
+        backgroundColor: '#d1d1ff',
+        color: 'black',
+        position: 'fixed',  
+        width: '100%',
+        top: 0,             
+        left: 0,        
+        zIndex: 1000,       
+        boxShadow: theme.palette.mode === 'dark' ? '0px 0px 10px rgba(255, 255, 255, 0.1)' : '0px 0px 10px rgba(0, 0, 0, 0.1)',}}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: '0% 5%' }}>
-          <img src="./logo.png" alt="logo" width='50px' style={{ opacity: isLoading ? 0 : 1, transition: 'opacity 0.5s ease-in-out' }} />
+      <a href="https://techligator.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <img src="./logo.png" alt="logo" width='50px' style={{ opacity: isLoading ? 0 : 1, transition: 'opacity 0.5s ease-in-out' }} />
+      </a>
+          <h1 className='larger-screen-heading' style={{textAlign: 'center', margin: '0px 0px'}}>AC Consumption and AC Calculator</h1>
+
           <div className='logo-and-heading'>
             <h4><a href="https://techligator.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>Blog</a></h4>&nbsp;&nbsp;&nbsp;
             <h4><a href="https://techligator.com/#about" target="_blank" rel="noopener noreferrer"  style={{ textDecoration: 'none', color: 'inherit' }}>About</a></h4>&nbsp;&nbsp;&nbsp;
@@ -87,8 +103,9 @@ function MyApp({ isLoading }) {
           <span>Calculator</span>
         </h1>
        </div> */}
-       <h1 style={{textAlign: 'center', margin: '0px 0px'}}>AC Consumption and AC Calculator</h1>
-        <App />
+       <h1 className='smaller-screen-heading' style={{textAlign: 'center', margin: '0px 0px'}}>AC Consumption and AC Calculator</h1>
+       </div>       
+        <App className='main-app-content' />
     </Box>
   );
 }

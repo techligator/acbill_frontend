@@ -44,7 +44,7 @@
     filter: brightness(0.8);
 }
 
-.header-slogan-bottom {
+/* .header-slogan-bottom {
     z-index: 2;
     position: absolute;
     top: 12vh;
@@ -53,7 +53,6 @@
     font-size: 1.6rem;
     font-weight: bold;
     color: white;
-    /* background: linear-gradient(0deg, #0b4227 0%, rgba(3, 39, 18, 0.8) 40%, rgba(3, 50, 25, 0.4) 60%,rgba(0,51,23,0) 100%); */
 }
 
 .header-slogan-top {
@@ -64,16 +63,12 @@
     font-size: 2rem;
     font-weight: bold;
     color: white;
-    /* background: linear-gradient(180deg, #0b4227 0%, rgba(3, 39, 18, 0.8) 10%, rgba(3, 50, 25, 0.4) 80%,rgba(0,51,23,0) 100%); */
 }
 
 .header-slogan-text {
     position: absolute;
     top: 40%;
     line-height: normal;
-    /* left: 33%;
-    right: 33%; */
-    /* text-align: center; */
     left: 50%;
     right: 4%;
     text-align: center;
@@ -97,19 +92,6 @@
     }
     
 }
-/* 
-@media screen and (max-width: 992px) {
-    .efficient-cooling-solutions{
-        text-align: start;
-        padding: 1vh;
-    }
-    .header-slogan-text {
-        top: 6%;
-        left: 10%;
-        right: 10%;
-    }
-    
-} */
 
 @media screen and (max-width: 767px) {
     .header-slogan-text {
@@ -133,4 +115,10 @@
         right: 10%;
         font-size: 4vw;
     }
-}
+} */
+
+@media screen and (max-width: 576px) {
+    .swiper-slide img {
+        height: 150px;
+    }
+} 

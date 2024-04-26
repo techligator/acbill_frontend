@@ -16,11 +16,11 @@ const Slider = () => {
   return (
     <div>
         <div className="slider-container">
-            <div className="header-slogan-top">
+            {/* <div className="header-slogan-top">
                 <div className='efficient-cooling-solutions'>
                     Efficient Cooling Solutions
                 </div>
-            </div>
+            </div> */}
             <div className="slider-overlay top"></div>
             <Swiper
                 spaceBetween={30}
@@ -40,11 +40,11 @@ const Slider = () => {
                 <SwiperSlide><img src="slider2.jpg" alt="sliderimage"/></SwiperSlide>
                 <SwiperSlide><img src="slider1.jpg" alt="sliderimage"/></SwiperSlide>
             </Swiper>
-            <div className="header-slogan-bottom">
+            {/* <div className="header-slogan-bottom">
                 <div className="header-slogan-text">
                     Calculate Consumption and Cost with our AC Consumption and Cost Calculator
                 </div>
-            </div>
+            </div> */}
             <div className="slider-overlay bottom"></div>
         </div>
     </div>

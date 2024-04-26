@@ -77,6 +77,10 @@ span:nth-child(9) {
 } */
 
 
+.header{
+  height: 64.15px;
+}
+
 
 .logo-and-heading{
   display: flex;
@@ -84,8 +88,25 @@ span:nth-child(9) {
   justify-content: space-between;
 }
 
-/* @media screen and (max-width: 576px) {
-  .logo-and-heading{
-    display: block;
+@media screen and (min-width: 992px) {
+  .smaller-screen-heading{
+    display: none;
   }
-} */
+}
+
+@media screen and (max-width: 992px) {
+  .larger-screen-heading{
+    display: none;
+  }
+
+  .header{
+    height: 106.55px;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .header{
+    height: 148.95px;
+  }
+}

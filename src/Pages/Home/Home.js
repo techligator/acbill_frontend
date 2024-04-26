@@ -259,11 +259,12 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div className='main-app-content'>
       <Slider />
       <Backdrop sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }} open={predictLoading}>
         <CircularProgress color="inherit" />
       </Backdrop>
+      <h1 style={{textAlign: 'center'}}>Estimate Your AC Usage and Costs</h1>
       <div className='homepage-content' style={{ margin: '2em', opacity: isLoading ? 0 : 1, transition: 'opacity 0.5s ease-in-out' }} >
         <div className='input-container'>
           <div className='each-input-for-mobile'>
@@ -339,7 +340,7 @@ const Home = () => {
               id='hours-used-per-day'
               label="Hours used per day"
               variant='filled'
-              type="text"
+              type="number"
               required
               // size='small'
               value={hoursUsedPerDay}
@@ -353,7 +354,7 @@ const Home = () => {
               id='electricity-rate'
               label="Electricity rate"
               variant='filled'
-              type="text"
+              type="number"
               required
               // size='small'
               value={electricityRate}
@@ -384,9 +385,11 @@ const Home = () => {
 
 
         {fieldAlert && (
-          <Alert variant="filled" severity="info" sx={{width: '200px'}}>
+          <div className='alert-container' >
+          <Alert variant="filled" severity="info" sx={{width: '200px', marginTop: '10px'}}>
             All fields must be filled.
           </Alert>
+          </div>
         )}
 
         {/* {phoneAlert && (
@@ -424,6 +427,7 @@ const Home = () => {
               // sx={{ boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px' }}
               label="Name "
               required
+              type='text'
               value={name}
               onChange={(e) => setName(e.target.value)}
               fullWidth
@@ -435,6 +439,7 @@ const Home = () => {
               // sx={{ boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px' }}
               label="Phone No "
               required
+              type='number'
               value={phoneNo}
               onChange={(e) => setPhoneNo(e.target.value)}
               fullWidth
@@ -448,9 +453,11 @@ const Home = () => {
             </div>
 
             {phoneAlert && (
-                <Alert variant="filled" severity="warning" sx={{width: '230px'}}>
+              <div className='alert-container'>
+                <Alert variant="filled" severity="warning" sx={{width: '280px', marginTop: '10px'}}>
                   Please Enter a Valid Phone Number.
                 </Alert>
+                </div>
               )}
           </Box>
         </Modal>
@@ -466,7 +473,14 @@ const Home = () => {
           {predictions.map((prediction, index) => (
             <Card className='zoom-in-out' key={index} sx={{ width: '370px', margin: '1.5em', padding: '0.5em', borderRadius: '1.5rem', boxShadow: 'rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;rgba(0, 0, 0, 0.35) 0px 5px 15px;' }}>
               <CardContent>
-                <h3 style={{ color: '#348DCC', fontSize: '1.4em' }}>Prediction {index + 1}</h3>
+                <h3 style={{ color: '#348DCC', fontSize: '1.4em', textAlign:'center' }}>Prediction {index + 1}</h3>
+                <hr className='divider'  style={{ 
+  width: '50%', 
+  margin: '0 auto', 
+  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', 
+  borderColor: '#ccc',
+  borderStyle: 'dashed'
+}}  />
                 <p><strong>AC Brand:</strong> {prediction.brand}</p>
                 <p><strong>AC Capacity:</strong> {prediction.capacity}</p>
                 <p><strong>Star Rating:</strong> {prediction.star_rating}</p>
@@ -475,6 +489,13 @@ const Home = () => {
                 <p><strong>Cost Period:</strong> {prediction.cost_period}</p>
                 <p><strong>Hours used per day:</strong> {prediction.hours_per_day}</p>
                 <p><strong>Electricity rate:</strong> {prediction.electricity_rate}</p>
+                <hr className='divider'  style={{ 
+  width: '50%', 
+  margin: '0 auto', 
+  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', 
+  borderColor: '#ccc',
+  borderStyle: 'dashed'
+}}  />
                 <p><strong style={{ color: '#348DCC', fontSize: '1.1em' }}>Estimated Consumption:</strong> <i style={{ color: 'grey', fontSize: '1.1em' }}>{prediction.estimated_consumption.lower_bound} - {prediction.estimated_consumption.upper_bound}</i></p>
                 <p><strong style={{ color: '#348DCC', fontSize: '1.1em' }}>Cost Per Period:</strong> <i style={{ color: 'grey', fontSize: '1.1em' }}>&#x20b9; {prediction.cost_per_period.lower_bound} - {prediction.cost_per_period.upper_bound}</i></p>
               </CardContent>
@@ -527,7 +548,7 @@ const Home = () => {
       </div>
       <br />
       <Footer />
-    </>
+    </div>
   );
 };
 

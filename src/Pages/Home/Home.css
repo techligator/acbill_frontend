@@ -156,13 +156,13 @@ a {
   .symbol::before{
     width: 2rem;
     height: 0.3rem;
-    background-color: #515676;
+    background-color: #348DCC;
     transition: background-color 1s linear;
   }
   .plus .symbol::after {
     width: 0.3rem;
     height: 2rem;
-    background-color: #515676;
+    background-color: #348DCC;
   }
 
 
@@ -203,7 +203,7 @@ a {
   
   /* Ensure the label color remains consistent */
   .MuiInputLabel-outlined.MuiInputLabel-shrink {
-    transform: translate(14px, -6px) scale(0.75); /* Adjust the label position when shrink */
+    transform: translate(14px, 4px) scale(0.75); /* Adjust the label position when shrink */
     color: #6199fb; 
   }
 
@@ -253,6 +253,12 @@ a {
     width: 30%;
   }
 
+
+  .alert-container{
+    display: flex;
+    align-items: center; 
+    justify-content: center
+  }
 
 
   /* @media screen and (max-width: 576px) {
@@ -345,5 +351,28 @@ a {
     .each-input-for-mobile {
       margin-left: 0;
       margin-right: 1em;
+    }
+  }
+
+
+
+  .main-app-content{
+    margin-top: 64.15px !important;
+  }
+  
+
+  
+  @media screen and (max-width: 992px) {
+
+    .main-app-content{
+      margin-top: 106.55px !important;
+    }
+  }
+  
+  
+  @media screen and (max-width: 992px) {
+ 
+    .main-app-content{
+      margin-top: 148.95px !important;
     }
   }
